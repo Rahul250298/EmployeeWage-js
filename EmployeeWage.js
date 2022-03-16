@@ -32,4 +32,22 @@ const WAGE_PER_HOUR = 20;
     let empwage = empHrs * WAGE_PER_HOUR;
     console.log("Empwage:" + empwage)
 }
+//UC 3
+function getWorkingHours(empcheck){
+    switch(empcheck){
+        case IS_PART_TIME:
+            return PART_TIME_HOURS;
+        case IS_FULL_TIME:
+            return FULL_TIME_HOURS;
+          default:
+                return 0;    
+    }
+}
+
+let empCheck = Math.floor(Math.random() * 10)% 3 ;
+let empHrs = getWorkingHours(empCheck);
+let empwage = empHrs * WAGE_PER_HOUR;
+console.log("hour:" +empHrs+ "Emp Wage:" +empwage);
+
+
 
